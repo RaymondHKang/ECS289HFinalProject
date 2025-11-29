@@ -4,7 +4,8 @@ from transformers import get_linear_schedule_with_warmup
 
 from config import DEVICE, MAX_SEQ_LENGTH
 from models import NSFWClassifier, get_tokenizer
-from data.dummy_data import make_dummy_classification_dataset
+#from data.dummy_data import make_dummy_classification_dataset
+from data.unified_nsfw import load_unified_nsfw
 
 
 def collate_fn(tokenizer, batch):
@@ -28,7 +29,7 @@ def train_base(
     lr: float = 2e-5,
 ):
     tokenizer = get_tokenizer()
-    dataset = make_dummy_classification_dataset()
+    dataset = load_unified_nsfw(split="train")
     loader = DataLoader(
         dataset,
         batch_size=batch_size,

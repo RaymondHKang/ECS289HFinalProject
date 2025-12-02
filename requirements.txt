@@ -3,3 +3,6 @@ transformers
 datasets
 numpy
 tqdm
+streamlit
+matplotlib
+pandas

@@ -55,7 +55,7 @@ def predict_with_concepts(backbone, concept_head, tokenizer, text: str):
 def main():
     backbone, concept_head, tokenizer = load_models()
 
-    text = "I hate you and your disgusting friends."  # example input
+    text = "Hi everyone, it is nice to meet you."  # example input
 
     print("Input:", text)
 

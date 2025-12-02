@@ -10,16 +10,16 @@ class RISETextExplainer:
     RISE for text: random token masking + score aggregation.
     Works with any black-box classifier that returns logits.
     """
-
     def __init__(
         self,
         model,
         tokenizer,
         target_label_idx: int = 1,
-        num_masks: int = 500,
+        num_masks: int = 128,   # ⬅ lower than 500/1000
         p_keep: float = 0.5,
         max_length: int = MAX_SEQ_LENGTH,
     ):
+
         """
         Args:
             model: NSFWClassifier (or any HF model wrapper with .forward returning logits)

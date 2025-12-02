@@ -10,7 +10,7 @@ Split = Literal["train", "validation", "test"]
 def load_jigsaw_unintended_bias(
     split: Split = "train",
     toxicity_threshold: float = 0.5,
-    csv_path: str = "/Users/raymondkang/Desktop/ECS289HFall2025/ECS289HFinalProject/data/all_data.csv",
+    csv_path: str = "/Users/raymondkang/Desktop/ECS289HFall2025/newone/data/all_data.csv",
 ) -> Dataset:
     """
     Load Jigsaw Unintended Bias from a local CSV and map to binary NSFW.

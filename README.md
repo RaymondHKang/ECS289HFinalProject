@@ -134,7 +134,7 @@ Dataset loaders are in `data/`.
 We visualize the project with streamlit which contains and can be run by:
 
 ```bash
-streamlit viz/dashboard.py
+streamlit run viz/dashboard.py
 ```
 
 - Token heatmaps  
